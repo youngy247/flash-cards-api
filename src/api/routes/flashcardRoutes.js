@@ -1,12 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const FlashcardController = require("../controllers/flashcardController");
+const flashcardController = require("../controllers/flashcardController");
 
-// routes
-router.post("/", FlashcardController.createFlashcard);
-router.get("/", FlashcardController.getAllFlashcards);
-router.get("/:id", FlashcardController.getFlashcard);
-router.put("/:id", FlashcardController.updateFlashcard);
-router.delete("/:id", FlashcardController.deleteFlashcard);
+router.post("/", flashcardController.createFlashcard);
+router.get("/", flashcardController.getAllFlashcards);
+router.get("/:id", flashcardController.getFlashcard);
+router.put("/:id", flashcardController.updateFlashcard);
+router.delete("/:id", flashcardController.deleteFlashcard);
 
 module.exports = router;
